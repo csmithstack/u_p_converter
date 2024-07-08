@@ -49,6 +49,7 @@ class UnitNotifier with ChangeNotifier {
 
   void updateSelectedUnit(String newUnit) {
     _selectedUnit = newUnit;
+    notifyListeners();
   }
 
   void _onMeasureChange() {
