@@ -45,7 +45,7 @@ class UnitPriceWidget extends StatelessWidget {
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(10)),
-                            child: UnitDropdown()),
+                            child: const UnitDropdown()),
                       ])))
         ]);
   }

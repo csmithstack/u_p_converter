@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'title_widget.dart';
+import 'unit_price_widget.dart';
 
 class UnitPriceCard extends StatelessWidget {
   const UnitPriceCard({super.key});
@@ -30,25 +32,18 @@ class UnitPriceCard extends StatelessWidget {
                     alignment: Alignment.topCenter,
                     //padding: const EdgeInsets.all(0),
                     //SizedBox(
-                    child: TitleWidget()),
+                    child: const TitleWidget()),
                 Expanded(
                     flex: 1,
                     child: Container(
                         // Holds Price
                         padding:
                             const EdgeInsets.all(5), // To control Row height
-                        child: Row(
+                        child: const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           mainAxisSize: MainAxisSize.max,
                           children: [
-                            Expanded(
-                                flex: 1,
-                                child: UnitPriceWidget(
-                                  selectedCurrency: _selectedCurrency,
-                                  selectedSystemOfMeasure:
-                                      _selectedSystemOfMeasure,
-                                  selectedUnitOfMeasure: _selectedUnitOfMeasure,
-                                )),
+                            Expanded(flex: 1, child: UnitPriceWidget()),
                           ],
                         ))),
               ],

@@ -15,8 +15,8 @@ class UnitNotifier with ChangeNotifier {
     required MeasureNotifier measureNotifier,
     required SystemNotifier systemNotifier,
   }) {
-    this._measureNotifier = measureNotifier;
-    this._systemNotifier = systemNotifier;
+    _measureNotifier = measureNotifier;
+    _systemNotifier = systemNotifier;
     _systemUnit =
         '${_systemNotifier.selectedSystem}_${_measureNotifier.selectedMeasure}';
     _measureNotifier.addListener(_setUnitList);
