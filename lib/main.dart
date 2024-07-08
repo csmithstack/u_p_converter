@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'unit_price_card.dart';
+import 'currency_notifier.dart';
 import 'system_notifier.dart';
 import 'measure_notifier.dart';
 import 'unit_notifier.dart';
@@ -77,6 +78,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return MultiProvider(
         providers: [
+          ChangeNotifierProvider<CurrencyNotifier>(
+            create: (_) => CurrencyNotifier(),
+          ),
           ChangeNotifierProvider<SystemNotifier>(
             create: (_) => SystemNotifier(),
           ),

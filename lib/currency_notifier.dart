@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'constants.dart';
 
 //
 class CurrencyNotifier extends ChangeNotifier {
@@ -8,8 +9,8 @@ class CurrencyNotifier extends ChangeNotifier {
   final NumberFormat _formatter = NumberFormat();
 
   //TODO: Set with Constant instead?
-  CurrencyNotifier(String initialCurrencyCode) {
-    _currencyCode = initialCurrencyCode;
+  CurrencyNotifier() {
+    _currencyCode = ConstantValues.currencyCodes.first;
     _currencySymbol = _formatter.simpleCurrencySymbol(_currencyCode);
   }
 

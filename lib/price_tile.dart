@@ -9,7 +9,10 @@ import 'package:provider/provider.dart';
 // TODO: Create a Currency struct for the different nationalizations
 
 class PriceTile extends StatefulWidget {
-  const PriceTile({super.key});
+  final String currencyCode;
+
+  // COnstructor
+  const PriceTile({super.key, required this.currencyCode});
 
   @override
   State<PriceTile> createState() => _PriceTileState();
