@@ -4,6 +4,7 @@ import 'unit_price_card.dart';
 import 'currency_notifier.dart';
 import 'system_notifier.dart';
 import 'measure_notifier.dart';
+import 'measure_dropdown.dart';
 import 'unit_notifier.dart';
 
 void main() {
@@ -122,12 +123,12 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
-          bottomNavigationBar: const BottomAppBar(
+          bottomNavigationBar: BottomAppBar(
               shape: CircularNotchedRectangle(),
               notchMargin: 5,
               color: Colors.blue,
               child: Row(children: [
-                // TODO: Measure_Dropdown
+                MeasureDropdown(),
               ])),
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerDocked,

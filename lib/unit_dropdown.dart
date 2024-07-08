@@ -15,7 +15,7 @@ class UnitDropdown extends StatelessWidget {
 
         return DropdownButton<String>(
           borderRadius: BorderRadius.circular(10),
-          value: dropdownSelection,
+          value: dropdownSelection.isNotEmpty ? dropdownSelection : null,
           icon: const Icon(Icons.arrow_drop_down),
           iconSize: 42,
           underline: const SizedBox(),

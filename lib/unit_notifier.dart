@@ -21,6 +21,11 @@ class UnitNotifier with ChangeNotifier {
         '${_systemNotifier.selectedSystem}_${_measureNotifier.selectedMeasure}';
     _measureNotifier.addListener(_setUnitList);
     _systemNotifier.addListener(_setUnitList);
+    _measureNotifier
+        .addListener(_onMeasureChange); // Listen to changes in MeasureNotifier
+    _systemNotifier
+        .addListener(_onSystemChange); // Listen to changes in SystemNotifier
+
     _unitList = _setUnitList();
     _selectedUnit = _unitList.first;
   }
@@ -54,13 +59,13 @@ class UnitNotifier with ChangeNotifier {
 
   void _onMeasureChange() {
     _unitList = _setUnitList(); // Update unit list when measure changes
-    _selectedUnit = _unitList.first;
+    _selectedUnit = _unitList.isNotEmpty ? _unitList.first : null;
     notifyListeners(); // Notify listeners about the change
   }
 
   void _onSystemChange() {
     _unitList = _setUnitList(); // Update unit list when system changes
-    _selectedUnit = _unitList.first;
+    _selectedUnit = _unitList.isNotEmpty ? _unitList.first : null;
     notifyListeners(); // Notify listeners about the change
   }
 

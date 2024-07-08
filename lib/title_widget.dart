@@ -8,7 +8,8 @@ class TitleWidget extends StatefulWidget {
 }
 
 class _TitleWidgetState extends State<TitleWidget> {
-  final TextEditingController _titleController = TextEditingController();
+  final TextEditingController _titleController =
+      TextEditingController(text: 'Item');
 
   @override
   Widget build(BuildContext context) {

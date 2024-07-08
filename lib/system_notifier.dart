@@ -5,6 +5,8 @@ import 'constants.dart';
 class SystemNotifier with ChangeNotifier {
   String _selectedSystem = ConstantValues.systemsOfMeasure.first;
 
+// TODO: Share and populate a list
+
   String? get selectedSystem => _selectedSystem;
 
   void updateSelectedSystem(String newSystem) {
